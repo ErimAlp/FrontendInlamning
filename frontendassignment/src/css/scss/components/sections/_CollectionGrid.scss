@@ -1,0 +1,117 @@
+.collection-grid {
+    
+    .title {
+        @include font-title-3;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+    .collection {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 100px;   
+        @include md {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include lg {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        @include xxl {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        .collection-card {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: $color-shadow-2;
+            border: 1px solid black;
+        }
+
+        @include md {
+            width: 100%;
+        }
+
+        .image-section {
+            position: relative;
+
+            img {
+                position: relative;
+                width: 100%;
+                object-fit: cover;
+                height: 250px;
+            }
+
+            .icons {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+
+                .link {
+                    height: 50px;
+                    width: 50px;
+                    font-size: 22px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $color-light-3;
+                    color: $color-dark-2;
+                    border-radius: 50%;
+                    text-decoration: none;
+                    box-shadow: $color-shadow-1;
+                    margin-left: 1rem;
+                    transition: background-color 0.25s, color 0.2s;
+                    margin-bottom: 1rem;
+
+                    &:hover,
+                    &:active {
+                        background-color: $color-dark-2;
+                        color: $color-light-2;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .btn-theme {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            text-align: center;
+        }
+    }
+}
+
+.body-section {
+    text-align: center;
+
+    .body-category {
+        font-weight: $font-weight-medium;
+        color: $color-dark-3;
+        margin-top: 15px;
+    }
+
+    .body-title {
+        font-size: 20px;
+        font-weight: $font-weight-bold;
+    }
+
+    .body-rating {
+        color: $color-theme;
+        font-size: 20px;
+    }
+
+    .body-price {
+        font-size: 22px;
+        font-weight: $font-weight-bold;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+}
