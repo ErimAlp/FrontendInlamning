@@ -1,3 +1,13 @@
-header {
-    background: #fff;
-}
+// core
+@import "core/fonts";
+@import "core/colors";
+@import "core/media";
+@import "core/base";
+@import "core/utilities";
+@import "core/buttons";
+
+
+// sections
+@import "components/sections/header";
+@import "components/sections/showcase";
+
