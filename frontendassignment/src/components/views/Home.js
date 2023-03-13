@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useProductContext } from '../../contexts/ProductContext'
 import CollectionGrid from '../partials/CollectionGrid'
+import SalesShowcase from '../partials/SalesShowcase'
 import Showcase from '../partials/Showcase'
 
 const Home = () => {
@@ -16,8 +17,8 @@ const Home = () => {
     <>
         <Showcase />
         <CollectionGrid title="Featured Products" items={featured} />
-        {/* <CollectionGrid title="New Products" items={latest} />
-        <CollectionGrid title="Popular Products" items={popular} /> */}
+        <SalesShowcase />
+        
     </>
   )
 }
