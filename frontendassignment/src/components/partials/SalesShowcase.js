@@ -26,12 +26,3 @@ const SalesShowcase = () => {
 }
 
 export default SalesShowcase
-
-{/* <div className='left-info'>
-    <div className='title'>Office Style</div>
-    <div className='action'>SHOP NOW</div>
-</div> */
-/* <div className='right-info'>
-<div className='title'>Party Style</div>
-    <div className='action'>SHOP NOW</div>
-</div> */}
