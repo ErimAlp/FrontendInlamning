@@ -1,6 +1,6 @@
 import React from 'react'
-import leftImg from '../../assets/office-style.png'
-import rightImg from '../../assets/party-style.png'
+import leftImg from '../../assets/images/office-style.png'
+import rightImg from '../../assets/images/party-style.png'
 
 const SalesShowcase = () => {
     return (

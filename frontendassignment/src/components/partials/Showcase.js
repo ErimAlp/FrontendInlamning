@@ -1,5 +1,5 @@
 import React from 'react'
-import ShowcaseImg from '../../assets/showcase-img.png'
+import ShowcaseImg from '../../assets/images/showcase-img.png'
 
 const Showcase = () => {
     return (
