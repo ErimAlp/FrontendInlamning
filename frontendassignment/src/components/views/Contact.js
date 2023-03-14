@@ -1,8 +1,15 @@
 import React from 'react'
+import ContactForm from '../forms/ContactForm'
+import Breadcrumb from '../partials/Breadcrumb'
+import GoogleMaps from '../partials/GoogleMaps'
 
 const Contact = () => {
   return (
-    <div></div>
+    <>
+      <Breadcrumb currentPage="Contacts"/>
+      <GoogleMaps />
+      <ContactForm />
+    </>
   )
 }
 

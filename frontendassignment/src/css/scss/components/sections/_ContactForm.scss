@@ -1,0 +1,86 @@
+.contact-form {
+    margin-top: 70px;
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+form {
+    margin-top: 40px;
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "name"
+        "email"
+        "comments"
+        "button";
+    gap: 20px;
+
+    @include md {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "name email"
+            "comments comments"
+            "button empty";
+    }
+
+    .error {
+        position: absolute;
+        font-size: 0.9em;
+        padding: 0px;
+        left: 15px;
+        color: $color-theme
+    }
+
+    input,
+    textarea {
+        position: relative;
+        width: 100%;
+        padding: 18px 20px;
+        margin: 10px;
+        border: 0;
+        border-bottom: 1px solid $color-shadow-2;
+        transition: outline 0.1s, border 0s;
+
+        &:focus {
+            border: 0;
+            outline: 2px solid $color-theme;
+        }
+
+    }
+}
+
+textarea {
+    height: 170px;
+    resize: none;
+}
+
+button {
+    margin-top: 5px;
+    margin-left: 10px;
+    grid-area: button;
+
+    @include lg {
+        width: 70%;
+    }
+}
+
+.contact-form-name {
+    grid-area: name;
+    position: relative;
+}
+
+.contact-form-email {
+    grid-area: email;
+    position: relative;
+
+}
+
+.contact-form-comments {
+    grid-area: comments;
+    position: relative;
+
+}
