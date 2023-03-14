@@ -47,7 +47,7 @@
                 position: relative;
                 width: 100%;
                 object-fit: cover;
-                height: 250px;
+                height: 220px;
             }
 
             .icons {
@@ -87,6 +87,9 @@
             left: 0;
             right: 0;
 
+            height: 25%;
+
+
             text-align: center;
         }
     }
@@ -96,23 +99,24 @@
     text-align: center;
 
     .body-category {
+        font-size: 0.9em;
         font-weight: $font-weight-medium;
         color: $color-dark-3;
         margin-top: 15px;
     }
 
     .body-title {
-        font-size: 20px;
+        font-size: 18x;
         font-weight: $font-weight-bold;
     }
 
     .body-rating {
         color: $color-theme;
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .body-price {
-        font-size: 22px;
+        font-size: 19px;
         font-weight: $font-weight-bold;
         margin-top: 10px;
         margin-bottom: 15px;
