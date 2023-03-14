@@ -3,8 +3,7 @@
     top: 0;
     z-index: 1;
     width: 100%;
-    transition: background-color 0.5s;
-    
+    transition: background-color 0.5s, box-shadow 0.3s;
     .container {
         padding-top: 1rem;
         padding-bottom: 1rem;      
@@ -20,7 +19,7 @@
 
     #logotype {
         grid-area: logotype;
-        font-size: 35px;
+        font-size: 36px;
         font-weight: $font-weight-bold;
         text-decoration: none;
         color: $color-dark-2;
@@ -113,4 +112,12 @@
 
 .activeHeader {
     background-color: $color-light-2;
+    box-shadow:
+  0px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+  0px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+  0px 12.5px 10px rgba(0, 0, 0, 0.035),
+  0px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+  0px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+  0px 100px 80px rgba(0, 0, 0, 0.07)
+;
 }
