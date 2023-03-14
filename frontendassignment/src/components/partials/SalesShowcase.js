@@ -14,7 +14,7 @@ const SalesShowcase = () => {
                 <div className='middle-section'>
                     <div className='title'>50% Offer</div>
                     <div className='desc'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem apriam eaque ipsa quae ab illo inventore</div>
-                    <button className='btn-theme'>FLASH SALE</button>
+                    <button className='btn-theme'><span className='btn-overflow-center'>FLASH SALE</span></button>
                 </div>
 
                 <div className='right-image-section'>

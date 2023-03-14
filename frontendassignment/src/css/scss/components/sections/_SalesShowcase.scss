@@ -78,8 +78,43 @@
         }
 
         .btn-theme {
+            @include light-colors-with-border;
             font-size: 0.8em;
+            font-weight: $font-weight-semibold;
+            margin: 0;
             margin-top: 25px;
+            white-space: nowrap;
+            border: 1px solid $color-dark-2;
+            
+            .btn-overflow-center {
+                margin-left: -100px;
+                margin-right: -100px;
+            }
+
+            &::before {
+                border-top: 2px solid $color-dark-2;
+                border-left: 2px solid $color-dark-2;
+            }
+
+            &::after {
+                border-bottom: 2px solid $color-dark-2;
+                border-right: 2px solid $color-dark-2;
+            }
+
+            &:hover {
+                @include dark-colors-with-border;
+
+                &::before {
+                    border-top: 2px solid $color-light-2;
+                    border-left: 2px solid $color-light-2;
+
+                }
+
+                &::after {
+                    border-bottom: 2px solid $color-light-2;
+                    border-right: 2px solid $color-light-2;
+                }
+            }
         }
 
         @include xl {

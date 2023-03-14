@@ -40,3 +40,8 @@ $color-shadow-2: rgba(112,112,112, 0.4);
     color: $color-light-2;
     border: 1px solid $color-dark-2;
 }
+
+@mixin light-colors-with-border {
+    background-color: $color-light-2;
+    color: $color-dark-2;
+}
