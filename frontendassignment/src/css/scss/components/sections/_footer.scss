@@ -1,7 +1,9 @@
 .footer {
     text-align: center;
     padding-top: 15px;
-    box-shadow: $color-shadow-2;
+    box-shadow: 1px -5px 6px 0px rgba(0,0,0,0.11);
+    -webkit-box-shadow: 1px -5px 6px 0px rgba(0,0,0,0.11);
+    -moz-box-shadow: 1px -5px 6px 0px rgba(0,0,0,0.11);
     
     .icons {
         display: flex;
