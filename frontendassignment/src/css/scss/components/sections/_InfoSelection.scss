@@ -1,0 +1,34 @@
+.infoSection {
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        // gap: 30px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        border: 0;
+        border-top: 1px solid $color-shadow-2;
+
+
+        .field {
+            // @include content-center;
+            text-align: center;
+            // min-width: 50px;
+            .icon {
+                font-size: 25px;
+            }
+
+            .title {
+                @include font-title-3;
+                font-weight: $font-weight-bold;
+            }
+
+            .text {
+                color: $color-dark-3;
+                width: 60%;
+            }
+
+        }
+
+    }
+}
