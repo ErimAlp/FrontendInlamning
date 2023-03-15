@@ -35,6 +35,19 @@ form {
         color: $color-theme
     }
 
+    .success {
+        @include content-center;
+        color: #146C65;
+        background-color: #C3DCCF;
+        width: fit-content;
+        padding: 5px 15px;
+        border-radius: 5px;
+    }
+
+    .icon {
+        margin-left: 15px;
+    }
+
     input,
     textarea {
         position: relative;

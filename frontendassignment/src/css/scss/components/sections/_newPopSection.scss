@@ -1,0 +1,99 @@
+.new-pop-section {
+
+    .banner-title {
+        @include font-title-1;
+        color: $color-light-1;
+        text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.64);
+    }
+
+    .btn-secondary {
+        width: fit-content;
+        height: min-content;
+        padding: 20px 30px;
+    }
+
+    .banner-section {
+        grid-area: banner;
+        padding-top: 110px;
+        padding-bottom: 110px;
+        display: flex;
+        @include content-center;
+        flex-direction: column;
+        background-color: #c5c5c5;
+
+        @include xl {
+            padding: 0;
+            height: 100%;
+        }
+
+    }
+
+    .collection-grid {
+        grid-area: products;
+        padding: 30px;
+        margin-bottom: 40px;
+
+        @include xl {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            margin: 0;
+            padding: 0 20px;
+        }
+
+        .collection {
+            @include xl {
+                grid-template-columns: 1fr 1fr 1fr;
+
+            }
+            .btn-theme {
+                white-space: nowrap;
+            }
+        }
+
+        .title {
+            @include xl {
+                margin: 0;
+            }
+
+        }
+    }
+
+    .new-products {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "banner"
+            "products";
+
+        @include xl {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "banner products";
+            margin-bottom: 30px;
+        }
+
+        .new-banner {
+            grid-area: banner;
+        }
+    }
+
+    .pop-products {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "banner"
+            "products";
+
+        @include xl {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "products banner";
+            margin-bottom: 60px;
+
+        }
+
+        .pop-banner {
+            grid-area: banner;
+        }
+
+    }
+}

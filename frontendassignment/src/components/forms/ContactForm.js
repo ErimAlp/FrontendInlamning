@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
 
 const ContactForm = () => {
-  const defaultValues = { name: '', email: '', comments: '' }
+  const defaultValues = { name: '', email: '', comments: '', alert: '' }
   const [form, setForm] = useState(defaultValues)
   const [errors, setErrors] = useState(defaultValues)
+
+  const [success, setSuccess] = useState(defaultValues)
+  const [badge, setBadge] = useState(false)
+  const [successhow, setSucceSshow] = useState(false)
 
   const validateName = (value) => {
     const regEx = /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/;
@@ -29,7 +33,7 @@ const ContactForm = () => {
   }
 
   const onChangeHandler = (e) => {
-    const { id, value, required } = e.target
+    const { id, value } = e.target
     setForm(current => ({ ...current, [id]: value }))
 
 
@@ -63,10 +67,22 @@ const ContactForm = () => {
         })
 
         if (res.status === 200) {
-          console.log('Your comment has been sent.')
+          setSuccess(current => ({ ...current, alert: 'Your request has been sent.' }))
+          setBadge(true)
+          setSucceSshow(true)
+          console.log('Your request has been sent.')
           setForm(defaultValues)
           setErrors(defaultValues)
         }
+        setTimeout(() => {
+          setSuccess(current => ({ ...current, alert: '' }))
+        }, 10000);
+
+        setTimeout(() => {
+          setBadge(false)
+          setSucceSshow(false)
+        }, 10000);
+
       }
     }
   }
@@ -94,6 +110,9 @@ const ContactForm = () => {
           </div>
 
           <button className="btn-theme" type="submit">Post Comments</button>
+          <div className={successhow ? 'success' : ''} id='alert' >{success.alert}
+            <div className='icon'><i className={badge ? 'fa-solid fa-message-check' : ''}></i></div>
+          </div>
         </form>
       </div>
     </section>
