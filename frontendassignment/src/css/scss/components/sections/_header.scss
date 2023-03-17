@@ -4,13 +4,15 @@
     z-index: 1;
     width: 100%;
     transition: background-color 0.5s, box-shadow 0.3s;
+
     .container {
         padding-top: 1rem;
-        padding-bottom: 1rem;      
+        padding-bottom: 1rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "logotype toggleicon"
-                             "menu menu";
+            "menu menu";
+
         @include lg {
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-areas: "logotype menu menu";
@@ -28,7 +30,8 @@
     #menu {
         grid-area: menu;
         grid-template-areas: "menulinks"
-                             "menuicons";
+            "menuicons";
+
         @include lg {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -39,6 +42,7 @@
     #menu-links {
         grid-area: menulinks;
     }
+
     #menu-icons {
         grid-area: menuicons;
         margin-top: 40px;
@@ -48,17 +52,17 @@
         }
     }
 
-    .links {      
+    .links {
         @include lg {
             display: flex !important;
             justify-content: center;
             align-items: center;
         }
-        
+
         .link {
             color: $color-dark-2;
             font-weight: $font-weight-medium;
-            text-decoration: none;           
+            text-decoration: none;
             margin: 10px 12px;
             display: block;
             transition: color 0.15s;
@@ -74,7 +78,7 @@
 
     .icons {
         @include content-center;
-        
+
         @include lg {
             justify-content: flex-end;
         }
@@ -97,11 +101,11 @@
                 text-decoration: none;
             }
         }
-        
+
     }
 
     #toggle-icon {
-        grid-area: toggleicon;   
+        grid-area: toggleicon;
         justify-content: flex-end;
 
         @include lg {
@@ -113,11 +117,10 @@
 .activeHeader {
     background-color: $color-light-2;
     box-shadow:
-  0px 2.8px 2.2px rgba(0, 0, 0, 0.02),
-  0px 6.7px 5.3px rgba(0, 0, 0, 0.028),
-  0px 12.5px 10px rgba(0, 0, 0, 0.035),
-  0px 22.3px 17.9px rgba(0, 0, 0, 0.042),
-  0px 41.8px 33.4px rgba(0, 0, 0, 0.05),
-  0px 100px 80px rgba(0, 0, 0, 0.07)
-;
+        0px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+        0px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+        0px 12.5px 10px rgba(0, 0, 0, 0.035),
+        0px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+        0px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+        0px 100px 80px rgba(0, 0, 0, 0.07);
 }

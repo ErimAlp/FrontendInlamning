@@ -8,15 +8,13 @@
         border: 0;
         border-top: 1px solid $color-shadow-2;
 
-        @include md {
-            
-        }
-        
+        @include md {}
+
         @include lg {
             grid-template-columns: 1fr 1fr;
-            
+
         }
-        
+
         @include xl {
             grid-template-columns: 1fr 1fr 1fr 1fr;
 
@@ -45,6 +43,7 @@
                 @include md {
                     width: 45%;
                 }
+
                 @include lg {
                     width: 100%;
                 }

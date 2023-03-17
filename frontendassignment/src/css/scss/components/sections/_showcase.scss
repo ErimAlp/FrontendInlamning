@@ -1,7 +1,6 @@
 .showcase {
     background: $color-light-3;
     background: linear-gradient(90deg, $color-light-3 0%, $color-light-2 100%);
-    // height: 3000px;
 
     .container {
         @include content-center;
@@ -25,9 +24,11 @@
         .title-1 {
             @include font-title-1;
         }
+
         .title-2 {
             @include font-title-2;
         }
+
         .title-3 {
             @include font-title-3;
         }
@@ -38,7 +39,7 @@
         margin-right: -50px;
         max-height: 745px;
         width: auto;
-    
+
         @include xl {
             display: block;
         }

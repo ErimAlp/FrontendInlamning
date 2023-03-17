@@ -10,7 +10,7 @@
             display: inline-block;
             font-weight: $font-weight-medium;
 
-            & + li::before {
+            &+li::before {
                 content: ">";
                 color: $color-dark-2;
                 margin-left: 0.5rem;
@@ -27,10 +27,10 @@
             color: $color-theme;
             text-decoration: underline;
         }
-        
+
     }
 
     .active {
-        color:$color-theme;
+        color: $color-theme;
     }
 }

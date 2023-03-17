@@ -7,22 +7,23 @@ import SalesShowcase from '../partials/SalesShowcase'
 import Showcase from '../partials/Showcase'
 
 const Home = () => {
-  const { featured, latest, popular, getFeaturedAsync, getLatestAsync, getPopularAsync } = useProductContext()
+  const { featured, getFeaturedAsync, latest, popular, getLatestAsync, getPopularAsync } = useProductContext()
 
   useEffect(() => {
     getFeaturedAsync()
     getLatestAsync()
     getPopularAsync()
+
   }, [])
 
   return (
     <>
-        <Showcase />
-        <CollectionGrid title="Featured Products" items={featured} />
-        <SalesShowcase />
-        <NewPopularSection />
-        <InfoSection />
-        
+      <Showcase />
+      <CollectionGrid title="Featured Products" items={featured} />
+      <SalesShowcase />
+      <NewPopularSection items1={latest} items2={popular}/>
+      <InfoSection />
+
     </>
   )
 }
